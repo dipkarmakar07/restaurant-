@@ -201,11 +201,11 @@ body {
 }
 
 .cardimg {
-    background-image: url('/assets/coffeecup.png');
+    background-image: url('coffeecup.png');
 }
 
 .cardimg2 {
-    background-image: url('/assets/jay.jpg');
+    background-image: url('jay.jpg');
 }
 
 .card p {
