@@ -1,0 +1,362 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: url('/assets/bar2.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.nav {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background: rgba(0,0,0,0.2);
+    padding: 0 20px; 
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 90px;
+    height: 70px;
+    background: url('/assets/cafelogo.png') no-repeat center center;
+    background-size: contain;
+  
+}
+
+.navber {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: bold; 
+}
+
+.navber li {
+    text-decoration: none;
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+}
+
+.navber li a {
+    color: rgba(245, 222, 179, 0.919);
+    transform: scale(1); 
+    transition: all 1.5s ease-in-out; 
+}
+
+.navber li a:hover {
+    color: rgb(245, 205, 131);
+    transform: scale(1.2);
+}
+
+.Order {
+    padding: 3px 4px;
+    background: rgba(0,0,0,0.2);
+    border: 2px solid rgba(255, 98, 0, 0.893);
+    color: white;
+    font-weight: bold; 
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.highlight {
+    width: 80%; 
+    max-width: 600px; 
+    height: 75% ; 
+    margin: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.highlight h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    color: rgba(230, 61, 18, 0.9);
+}
+
+.highlight p {
+    font-size: 1.2rem;
+    margin: 20px 0 0 0;
+    width: 100%; 
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.highlight p span {
+    display: inline-block;  
+    padding: 5px 10px;  
+    background: rgba(230, 61, 18, 0.9); 
+    border-radius: 5px;  
+    color: white;  
+    margin-top: 10px;  
+    font-weight: bold; 
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .navber {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .navber li {
+        padding: 5px 0;
+    }
+
+    .highlight h1 {
+        font-size: 2rem;
+    }
+
+    .highlight p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 70px;
+        height: 50px;
+    }
+
+    .highlight h1 {
+        font-size: 1.5rem;
+    }
+
+    .highlight p {
+        font-size: 0.9rem;
+    }
+}
+
+.hero {
+    margin-top: 120px;
+    width: 100%;
+    height: 600px; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 0 10px; 
+    box-sizing: border-box;
+}
+
+.card {
+    width: 30%;
+    
+    height: 80%; 
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background: white; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+.cardimg, .cardimg2 {
+    margin-top: 10px;
+    width: 100%;
+    aspect-ratio: 4/3; 
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.3s ease; 
+}
+
+.cardimg:hover, .cardimg2:hover {
+    transform: scale(1.05); 
+}
+
+.cardimg {
+    background-image: url('/assets/coffeecup.png');
+}
+
+.cardimg2 {
+    background-image: url('/assets/jay.jpg');
+}
+
+.card p {
+    margin-top: 10px; 
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; 
+    }
+
+    .cardimg, .cardimg2 {
+        aspect-ratio: 16/9; 
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%; 
+    }
+
+    .cardimg, .cardimg2 {
+        aspect-ratio: 1/1; 
+    }
+}
+.ndhero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; 
+    padding: 10px; 
+    box-sizing: border-box; 
+  }
+  
+  @media (max-width: 768px) {
+    .ndhero {
+      width: 90%; 
+      justify-content: center; 
+    
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .ndhero {
+        margin-top:415px;
+      width: 100%; 
+      justify-content: center; 
+      padding: 5px; 
+    }
+  }
+  .carou {
+    width: 80%;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; 
+  }
+  
+  .carousel-inner img {
+    max-height: 400px; 
+    object-fit: cover; 
+  }
+  
+  @media (max-width: 768px) {
+    .carou {
+      width: 100%; /* Adjust width for smaller screens */
+    }
+  
+    .carousel-inner img {
+      max-height: 300px; /* Adjust image height for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carou {
+      width: 100%; /* Full width for very small screens */
+    }
+  
+    .carousel-inner img {
+      max-height: 200px; /* Adjust image height for very small screens */
+    }
+  }
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 200px;
+  }
+  
+  .footer-section h2 {
+    margin-bottom: 15px;
+  }
+  
+  .footer-section p, .footer-section ul {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    background-color: #222;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  .footer .fas {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      max-width: 300px;
+    }
+  }
+  
